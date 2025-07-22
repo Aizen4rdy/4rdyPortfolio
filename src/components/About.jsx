@@ -42,7 +42,6 @@ export default function About() {
 
     const tick = () => {
       el.scrollLeft += speed;
-
       if (el.scrollLeft >= el.scrollWidth / 2) {
         el.scrollLeft -= el.scrollWidth / 2;
       }
@@ -55,12 +54,12 @@ export default function About() {
 
   return (
     <section id="about" className="pt-16 pb-16 bg-10">
-      {}
+      {/* Title */}
       <div className="text-center mb-10">
         <h1 className="text-6xl font-extrabold">BIO</h1>
       </div>
 
-      {}
+      {/* Divider */}
       <div className="flex items-center justify-center mb-16">
         <div className="h-px w-24 bg-gray-300" />
         <div className="flex items-center mx-4 gap-2">
@@ -70,14 +69,13 @@ export default function About() {
         </div>
         <div className="h-px w-24 bg-gray-300" />
       </div>
-      {}
+
+      {/* Logos Scroller */}
       <div className="flex items-center justify-center pb-5 text-2xl font-semibold">
         <h1>PROGRAMMING LANGUAGES AND UTILITIES</h1>
       </div>
       <div className="relative w-full max-w-3xl mx-auto overflow-hidden py-8">
-        {}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent z-10" />
-        {}
         <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent z-10" />
 
         <div
@@ -91,11 +89,11 @@ export default function About() {
           ))}
         </div>
       </div>
-      {}
+
+      {/* Main Section */}
       <div className="container mx-auto px-6 md:px-8 md:pl-20 flex flex-col md:flex-row gap-12">
-        {}
+        {/* Left - Info */}
         <div className="flex-1 space-y-12">
-          {}
           <div>
             <h2 className="text-2xl font-semibold mb-4">OVERVIEW</h2>
             <p className="text-[15px] leading-relaxed max-w-4xl text-justify">
@@ -103,7 +101,6 @@ export default function About() {
             </p>
           </div>
 
-          {}
           <div>
             <h2 className="text-2xl font-semibold mb-4">SCOPES</h2>
             <div className="flex gap-20 mx-4 max-w-4xl">
@@ -125,7 +122,7 @@ export default function About() {
               </ul>
             </div>
           </div>
-          {}
+
           <div className="text-2xl font-semibold">
             <h2>ABOUT ME</h2>
             <p className="text-[15px] max-w-4xl text-justify leading-7 font-normal mt-5 whitespace-pre-line">
@@ -134,49 +131,40 @@ export default function About() {
           </div>
         </div>
 
-        {}
+        {/* Right - Photo & Info */}
         <div>
           <div className="relative w-64 h-64 overflow-hidden mx-auto group mr-40">
-            {}
             <img
               src={profilePic}
               alt={person.name}
               className="w-full h-full object-cover photo-transition"
             />
-            {}
             <img
               src={profileBorder}
               alt=""
-              className=" pointer-events-none
-            absolute inset-0 w-full h-full object-cover
-            opacity-0
-            group-hover:opacity-100
-            transition-opacity delay-1000 duration-1000 ease-in-out"
+              className="pointer-events-none absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity delay-1000 duration-1000 ease-in-out"
             />
           </div>
-          {}
-          <div className="p-6 mr-5 ">
+
+          <div className="p-6 mr-5">
             <ul className="divide-y divide-gray-200 text-sm text-gray-700">
-              <li className="flex items-center py-3 ">
+              <li className="flex items-center py-3">
                 <FaUser className="text-green-500 w-5 h-5 mr-3" />
                 <span className="font-medium w-28">Name:</span>
                 <span>
                   {person.name.fname} {person.name.lname}
                 </span>
               </li>
-
               <li className="flex items-center py-3">
                 <FaBirthdayCake className="text-green-500 w-5 h-5 mr-3" />
                 <span className="font-medium w-28">Birth:</span>
                 <span>{person.bio.birth}</span>
               </li>
-
               <li className="flex items-center py-3">
                 <FaHome className="text-green-500 w-5 h-5 mr-3" />
                 <span className="font-medium w-28">Location:</span>
                 <span>{person.bio.location.loc}</span>
               </li>
-
               <li className="flex items-center py-3">
                 <FaGlobe className="text-green-500 w-5 h-5 mr-3" />
                 <span className="font-medium w-28">Citizenship:</span>
@@ -184,31 +172,24 @@ export default function About() {
               </li>
             </ul>
           </div>
-          {}
-          <>
-            <div className="flex justify-center pr-30">
-              <div
-                className="mx-auto transition-transform duration-100 ease-in-out hover:scale-105 cursor-pointer hover:bg-green-200 hover:rounded-3xl"
-                onClick={handleClickOpen}
+
+          {/* ✅ Resume Button */}
+          <div className="flex justify-center pr-30">
+            <div className="mx-auto transition-transform duration-100 ease-in-out hover:scale-105 cursor-pointer hover:bg-green-200 hover:rounded-3xl">
+              <a
+                href="/SADIO_FINAL_RESUME.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-green-500 rounded-4xl flex items-center justify-center h-10 w-40"
               >
-                <a
-                  href="/cv-resume/SADIO_FINAL_RESUME.pdf"
-                  download="SADIO_FINAL_RESUME.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-2 border-green-500 rounded-4xl flex items-center justify-center h-10 w-40"
-                >
-                  <span className="font-semibold">RESUME</span>
-                  <FaDownload className="text-green-500 w-5 h-5 ml-2" />
-                </a>
-              </div>
+                <span className="font-semibold">RESUME</span>
+                <FaDownload className="text-green-500 w-5 h-5 ml-2" />
+              </a>
             </div>
-          </>
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
-
-
