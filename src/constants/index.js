@@ -107,7 +107,7 @@ import tailwindLogo from "../assets/utilities/tailwind.png";
 import mongoLogo from "../assets/utilities/mongodb.png";
 import nodeLogo from "../assets/utilities/nodejs.png";
 import bootstrapLogo from "../assets/utilities/bootstrap.png";
-
+import expressLogo from "../assets/utilities/express.png";
 import vscodeLogo from "../assets/utilities/vscode.png";
 import dockerLogo from "../assets/utilities/docker.png";
 import postmanLogo from "../assets/utilities/postman.png";
@@ -136,6 +136,7 @@ const logos = [
   flutterLogo,
   cssLogo,
   htmlLogo,
+  expressLogo
 ];
 
 // Certificate logos
