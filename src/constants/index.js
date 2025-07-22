@@ -182,7 +182,7 @@ const certificates = [
 // Projects
 import lakbayImg from "../assets/projects/lakbaymarista.png";
 import lakeSebuImg from "../assets/projects/lake-sebu-dashboard.png";
-import googleAuthImg from "../assets/projects/Google-authenticator.png";
+import googleAuthImg from '../assets/projects/google-authenticator.png';
 import weYouImg from "../assets/projects/we-you.png";
 
 const projects = [
