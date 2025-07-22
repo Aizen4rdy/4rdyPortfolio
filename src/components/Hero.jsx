@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Lottie from "lottie-react";
-import textBubble from "../assets/pixel-speech-bubble.gif";
 import backgroundGif from "../assets/background.gif";
-import catAnimation from "../assets/8-bit.json";
 import { person, tagline, typedTitle, info } from "../constants";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -11,7 +8,6 @@ const Hero = () => {
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
-  const [showBubble, setShowBubble] = useState(false);
 
   useEffect(() => {
     const current = typedTitle.title[index];
@@ -46,28 +42,7 @@ const Hero = () => {
       className="relative h-screen w-full overflow-hidden bg-no-repeat pt-16"
       data-aos="fade-in"
     >
-      {/* Background elements */}
       <div className="absolute inset-0">
-        <div
-          className="absolute top-[50%] right-10 translate-y-[-50%] z-30 w-70 h-100 [transform:rotateY(180deg)] cursor-pointer"
-          onClick={() => setShowBubble((prev) => !prev)}
-        >
-          <Lottie
-            animationData={catAnimation}
-            loop={true}
-            autoplay={true}
-            style={{ width: "100%", height: "100%" }}
-          />
-        </div>
-
-        <div
-          className={`absolute top-[25%] right-40 w-80 h-80 z-20 pointer-events-none transition-opacity duration-300 ${
-            showBubble ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <img src={textBubble} alt="text-bubble" />
-        </div>
-
         <img
           src={backgroundGif}
           alt="background"
@@ -75,11 +50,8 @@ const Hero = () => {
         />
       </div>
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/70 z-10"></div>
 
-    
-      {/* Hero content */}
       <div className="absolute inset-0 z-20 flex flex-col justify-center items-center h-full px-4 sm:px-0 gap-y-6">
         <header className="w-full text-center text-white space-y-4 cursor-default">
           <h1 className="text-2xl sm:text-3xl font-bold tracking-wide hover:text-amber-400 transition duration-300">
