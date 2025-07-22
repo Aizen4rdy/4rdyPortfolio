@@ -38,7 +38,7 @@ export default function About() {
     el.scrollLeft = 0.1;
 
     let rafId;
-    const speed = 1.3;
+    const speed = 1.0;
 
     const tick = () => {
       el.scrollLeft += speed;
